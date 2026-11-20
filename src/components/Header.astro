@@ -1,0 +1,28 @@
+---
+import logo from '../image/logo.png';
+---
+
+<a class="brand" href="/" aria-label="Bstrap home">
+	<img src={logo.src} alt="" width="72" height="72" />
+	<span>Bstrap</span>
+</a>
+
+<style>
+	.brand {
+		display: inline-flex;
+		align-items: center;
+		gap: 1rem;
+		color: #171717;
+		font-size: clamp(1.75rem, 5vw, 2.5rem);
+		font-weight: 600;
+		letter-spacing: -0.06em;
+		text-decoration: none;
+	}
+
+	img {
+		display: block;
+		width: 4.5rem;
+		height: 4.5rem;
+		object-fit: contain;
+	}
+</style>
