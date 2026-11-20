@@ -1,1 +1,10 @@
 
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Inter, "Segoe UI", Arial, sans-serif;
+	color: #171717;
+	background: #fff;
+}

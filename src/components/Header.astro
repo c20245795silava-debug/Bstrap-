@@ -2,27 +2,80 @@
 import logo from '../image/logo.png';
 ---
 
-<a class="brand" href="/" aria-label="Bstrap home">
-	<img src={logo.src} alt="" width="72" height="72" />
-	<span>Bstrap</span>
-</a>
+<header>
+	<a class="brand" href="/" aria-label="Bstrap home">
+		<img src={logo.src} alt="" width="72" height="72" />
+		<span>Bstrap</span>
+	</a>
+	<nav aria-label="Primary navigation">
+		<a href="#hero">Hero</a>
+		<a href="#services">Services</a>
+		<a href="#process">Process</a>
+		<a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+
+	</nav>
+</header>
 
 <style>
+	header {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		padding: 1.25rem clamp(1.5rem, 8vw, 8rem);
+		border-bottom: 1px solid #ecece8;
+		background: rgba(255, 255, 255, 0.96);
+		backdrop-filter: blur(10px);
+	}
 	.brand {
 		display: inline-flex;
 		align-items: center;
 		gap: 1rem;
 		color: #171717;
-		font-size: clamp(1.75rem, 5vw, 2.5rem);
+		font-size: clamp(1.5rem, 3vw, 2rem);
 		font-weight: 600;
 		letter-spacing: -0.06em;
 		text-decoration: none;
 	}
-
 	img {
 		display: block;
-		width: 4.5rem;
-		height: 4.5rem;
+		width: 3.5rem;
+		height: 3.5rem;
 		object-fit: contain;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		gap: clamp(1.25rem, 3vw, 2.5rem);
+	}
+	nav a {
+		color: #55554f;
+		font-size: 0.95rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+	nav a:hover {
+		color: #171717;
+	}
+	@media (max-width: 560px) {
+		header {
+			align-items: center;
+			padding-inline: 1.25rem;
+		}
+		.brand {
+			gap: 0.65rem;
+		}
+		img {
+			width: 2.75rem;
+			height: 2.75rem;
+		}
+		nav {
+			gap: 0.75rem;
+		}
 	}
 </style>

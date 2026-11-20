@@ -1,21 +1,29 @@
 ---
 import BaseLayout from '../layout/BaseLayout.astro';
 import Header from '../components/Header.astro';
+import Hero from './index/section/Hero.astro';
+import About from './index/section/About.astro';
+import Services from './index/section/services.astro';
+import Process from './index/section/Process.astro';
+import Project from './index/section/Project.astro';
+import Contact from './index/section/Contact.astro';
 ---
 
 <BaseLayout>
 	<main>
 		<Header />
+		<Hero />
+		<Services />
+		<Process />
+		<About />
+		<Project />
+		<Contact />
 	</main>
 </BaseLayout>
 
 <style>
 	main {
-		display: grid;
 		min-height: 100svh;
-		align-items: start;
-		justify-items: start;
-		padding: 1.5rem clamp(1.5rem, 8vw, 8rem);
 		background: #fff;
 	}
 </style>

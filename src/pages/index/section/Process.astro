@@ -1,0 +1,85 @@
+---
+const steps = [
+	{ number: '', title: 'Choose', text: 'Pick a model and colors from the collection, or send us your own idea.' },
+	{ number: '', title: 'Confirm', text: 'We send a mockup and price. You approve it before we cut any fabric.' },
+	{ number: '', title: 'Sew', text: 'Each bag is cut, stitched and strength-tested by hand in small batches.' },
+    { number: '', title: 'Deliver', text: 'Packed and shipped to your door, usually within two weeks.' },
+];
+---
+
+<section id="process" class="process">
+	<div class="heading">
+		<h2>How it's made</h2>
+	</div>
+	<div class="steps">
+		{steps.map((step) => (
+			<article>
+				<span>{step.number}</span>
+				<h3>{step.title}</h3>
+				<p>{step.text}</p>
+			</article>
+		))}
+	</div>
+</section>
+
+<style>
+	.process {
+		padding: clamp(4.5rem, 9vw, 8.5rem) clamp(1.5rem, 8vw, 8rem);
+		background: #fff;
+		scroll-margin-top: 2rem;
+	}
+	.heading {
+		margin-bottom: clamp(3rem, 6vw, 5rem);
+	}
+	.eyebrow {
+		margin-bottom: 1.25rem;
+		color: #77776f;
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+	}
+	h2 {
+		margin: 0;
+		font-size: clamp(3.25rem, 7vw, 6.5rem);
+		line-height: 0.9;
+		letter-spacing: -0.06em;
+	}
+	.steps {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: clamp(1.5rem, 4vw, 4rem);
+	}
+	article {
+		padding-top: 1.5rem;
+		border-top: 1px solid #d7d7d0;
+	}
+	article span {
+		display: block;
+		margin-bottom: clamp(3rem, 7vw, 6rem);
+		color: #77776f;
+		font-size: 0.78rem;
+	}
+	h3 {
+		margin: 0 0 1rem;
+		font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+		letter-spacing: -0.045em;
+	}
+	p {
+		max-width: 340px;
+		margin: 0;
+		color: #62625c;
+		line-height: 1.65;
+	}
+	@media (max-width: 780px) {
+		.steps {
+			grid-template-columns: 1fr;
+		}
+		article {
+			padding-bottom: 1rem;
+		}
+		article span {
+			margin-bottom: 2rem;
+		}
+	}
+</style>

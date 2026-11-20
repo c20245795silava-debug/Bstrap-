@@ -1,0 +1,114 @@
+<section id="contact" class="contact">
+	<div>
+		<div class="eyebrow">Partner with us</div>
+		<h2>Let's build<br />Bstrap.</h2>
+	</div>
+	<div class="details">
+		<p>Join the Bstrap launch list or ask about partnerships and Carry 01 availability.</p>
+		<form action="mailto:hello@bstarp.com" method="post" enctype="text/plain">
+			<label for="contact-name">Name</label>
+			<input id="contact-name" name="name" type="text" placeholder="Your name" required />
+
+			<label for="contact-email">Email</label>
+			<input id="contact-email" name="email" type="email" placeholder="you@example.com" required />
+
+			<label for="contact-message">Message</label>
+			<textarea id="contact-message" name="message" rows="4" placeholder="Tell us what you need" required></textarea>
+
+			<button type="submit">Send message <span aria-hidden="true">↗</span></button>
+		</form>
+	</div>
+</section>
+
+<style>
+	.contact {
+		display: grid;
+		grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.5fr);
+		align-items: end;
+		gap: clamp(2rem, 7vw, 7rem);
+		padding: clamp(4.5rem, 9vw, 8.5rem) clamp(1.5rem, 8vw, 8rem);
+		background: #171717;
+		color: #fff;
+		scroll-margin-top: 2rem;
+	}
+	.eyebrow {
+		margin-bottom: 1.25rem;
+		color: #aaa9a2;
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+	}
+	h2 {
+		margin: 0;
+		font-size: clamp(3.25rem, 7vw, 7rem);
+		line-height: 0.92;
+		letter-spacing: -0.06em;
+	}
+	p {
+		margin: 0 0 2rem;
+		color: #bcbcb5;
+		line-height: 1.65;
+	}
+	form {
+		display: grid;
+		gap: 0.75rem;
+	}
+	label {
+		color: #d7d7d0;
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+	input,
+	textarea {
+		width: 100%;
+		margin-bottom: 0.35rem;
+		padding: 0.85rem 0;
+		border: 0;
+		border-bottom: 1px solid #66665f;
+		border-radius: 0;
+		outline: none;
+		background: transparent;
+		color: #fff;
+		font: inherit;
+	}
+	textarea {
+		resize: vertical;
+	}
+	input::placeholder,
+	textarea::placeholder {
+		color: #92928b;
+	}
+	input:focus,
+	textarea:focus {
+		outline: none;
+		border-bottom-color: #fff;
+	}
+	button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 0.75rem;
+		padding: 1rem 1.25rem;
+		border: 0;
+		background: #fff;
+		color: #171717;
+		font: inherit;
+		font-weight: 700;
+		cursor: pointer;
+	}
+	button:hover {
+		background: #e8e8e1;
+	}
+	@media (max-width: 780px) {
+		.contact {
+			grid-template-columns: 1fr;
+		}
+		h2 {
+			font-size: clamp(3.25rem, 14vw, 5.5rem);
+		}
+	}
+</style>

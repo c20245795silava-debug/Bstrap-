@@ -1,0 +1,114 @@
+---
+const services = [
+	{ number: '', title: 'Everyday sling', description: 'Ready-to-ship bags in water-resistant fabric, built for daily use.' },
+	{ number: '', title: 'Repair strap swaps', description: 'Broken zipper or worn strap? We fix it instead of you replacing the bag.' },
+	{ number: '', title: 'Bulk orders', description: 'We work with small businesses and organizations to create custom bags for your team or customers.' },
+];
+---
+
+<section id="services" class="services">
+	<div class="heading">
+		<div>
+			<h2>Services</h2>
+		</div>
+	</div>
+	<div class="grid">
+		{services.map((service) => (
+			<article>
+				<span>{service.number}</span>
+				<h3>{service.title}</h3>
+				<p>{service.description}</p>
+			</article>
+		))}
+	</div>
+</section>
+
+<style>
+	.services {
+		padding: clamp(4.5rem, 9vw, 8.5rem) clamp(1.5rem, 8vw, 8rem);
+		background: #171717;
+		color: #fff;
+		scroll-margin-top: 2rem;
+	}
+	.heading {
+		display: grid;
+		grid-template-columns: 1fr minmax(250px, 390px);
+		align-items: end;
+		gap: 2rem;
+		margin-bottom: clamp(3rem, 6vw, 5rem);
+	}
+	.eyebrow {
+		margin-bottom: 1.25rem;
+		color: #aaa9a2;
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+	}
+	h2 {
+		margin: 0;
+		font-size: clamp(3.25rem, 7vw, 6.5rem);
+		line-height: 0.9;
+		letter-spacing: -0.06em;
+	}
+	.heading > p {
+		margin: 0;
+		color: #bcbcb5;
+		font-size: 1.05rem;
+		line-height: 1.65;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		border-top: 1px solid #454540;
+	}
+	article {
+		min-height: 260px;
+		padding: 2rem clamp(1.25rem, 3vw, 2.5rem) 1rem 0;
+		border-right: 1px solid #454540;
+	}
+	article:not(:first-child) {
+		padding-left: clamp(1.25rem, 3vw, 2.5rem);
+	}
+	article:last-child {
+		border-right: 0;
+	}
+	article span {
+		display: block;
+		margin-bottom: 4.5rem;
+		color: #aaa9a2;
+		font-size: 0.78rem;
+	}
+	h3 {
+		margin: 0 0 1rem;
+		font-size: clamp(1.35rem, 2vw, 1.75rem);
+		letter-spacing: -0.035em;
+	}
+	article p {
+		max-width: 300px;
+		margin: 0;
+		color: #aaa9a2;
+		line-height: 1.65;
+	}
+	@media (max-width: 780px) {
+		.heading {
+			grid-template-columns: 1fr;
+		}
+		.grid {
+			grid-template-columns: 1fr;
+		}
+		article,
+		article:not(:first-child) {
+			min-height: 0;
+			padding: 2rem 0;
+			border-right: 0;
+			border-bottom: 1px solid #454540;
+		}
+		article:last-child {
+			border-bottom: 0;
+		}
+		article span {
+			margin-bottom: 2.5rem;
+		}
+	}
+</style>
