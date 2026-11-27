@@ -1,8 +1,16 @@
+---
+import contactImage from '../../../image/contact.png';
+---
+
 <section id="contact" class="contact">
 	<div>
 		<div class="eyebrow">Partner with us</div>
 		<h2>Let's build<br />Bstrap.</h2>
 	</div>
+	<figure class="image-frame">
+		<img src={contactImage.src} alt="Two friends smiling together" />
+		<figcaption>Bstrap, made for your everyday</figcaption>
+	</figure>
 	<div class="details">
 		<p>Order or ask us anything.</p>
 		<form action="mailto:hello@bstarp.com" method="post" enctype="text/plain">
@@ -23,13 +31,37 @@
 <style>
 	.contact {
 		display: grid;
-		grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.5fr);
-		align-items: end;
-		gap: clamp(2rem, 7vw, 7rem);
+		grid-template-columns: minmax(0, 1fr) minmax(190px, 0.75fr) minmax(260px, 1fr);
+		align-items: start;
+		gap: clamp(1.5rem, 4vw, 4rem);
 		padding: clamp(4.5rem, 9vw, 8.5rem) clamp(1.5rem, 8vw, 8rem);
 		background: #171717;
 		color: #fff;
 		scroll-margin-top: 2rem;
+	}
+	.image-frame {
+		width: min(100%, 360px);
+		margin: 0 auto 0.75rem;
+		padding: 0.65rem;
+		border: 1px solid #d8d7d0;
+		background: #fff;
+		box-shadow: 12px 12px 0 #77776f;
+	}
+	.image-frame img {
+		display: block;
+		width: 100%;
+		aspect-ratio: 3 / 4;
+		border: 1px solid #d8d7d0;
+		object-fit: cover;
+		object-position: center 45%;
+	}
+	.image-frame figcaption {
+		padding: 0.8rem 0.25rem 0.1rem;
+		color: #62625c;
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
 	}
 	.eyebrow {
 		margin-bottom: 1.25rem;
@@ -106,6 +138,9 @@
 	@media (max-width: 780px) {
 		.contact {
 			grid-template-columns: 1fr;
+		}
+		.image-frame {
+			width: min(82%, 420px);
 		}
 		h2 {
 			font-size: clamp(3.25rem, 14vw, 5.5rem);
