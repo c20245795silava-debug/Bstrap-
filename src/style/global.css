@@ -8,3 +8,120 @@ body {
 	color: #171717;
 	background: #fff;
 }
+
+html[data-theme="dark"] body {
+	color: #f3f1eb;
+	background: #171717;
+}
+
+html[data-theme="dark"] header {
+	border-bottom-color: #3a3a37;
+	background: rgba(23, 23, 23, 0.96);
+}
+
+html[data-theme="dark"] header .brand,
+html[data-theme="dark"] header nav a,
+html[data-theme="dark"] header nav a:hover {
+	color: #f3f1eb;
+}
+
+html[data-theme="dark"] header .theme-toggle {
+	border-color: #555550;
+	color: #f3f1eb;
+}
+
+html[data-theme="dark"] header .theme-toggle:hover {
+	background: #30302d;
+}
+
+html[data-theme="dark"] .hero,
+html[data-theme="dark"] .about,
+html[data-theme="dark"] .projects {
+	background: #222220;
+	color: #f3f1eb;
+}
+
+html[data-theme="dark"] .hero .eyebrow,
+html[data-theme="dark"] .hero .footer p,
+html[data-theme="dark"] .hero .footer a,
+html[data-theme="dark"] .about .eyebrow,
+html[data-theme="dark"] .about p,
+html[data-theme="dark"] .about a,
+html[data-theme="dark"] .projects .eyebrow,
+html[data-theme="dark"] .projects .heading > p,
+html[data-theme="dark"] .projects article > p {
+	color: #c1c1b9;
+}
+
+html[data-theme="dark"] .hero .footer {
+	border-top-color: #494943;
+}
+
+html[data-theme="dark"] .about a {
+	border-bottom-color: #c1c1b9;
+}
+
+html[data-theme="dark"] .process {
+	background: #171717;
+	color: #f3f1eb;
+}
+
+html[data-theme="dark"] .process .eyebrow,
+html[data-theme="dark"] .process article span,
+html[data-theme="dark"] .process p {
+	color: #bcbcb5;
+}
+
+html[data-theme="dark"] .process article {
+	border-top-color: #454540;
+}
+
+html[data-theme="dark"] .services,
+html[data-theme="dark"] .contact {
+	background: #292927;
+	color: #f3f1eb;
+}
+
+html[data-theme="dark"] .services .eyebrow,
+html[data-theme="dark"] .services .heading > p,
+html[data-theme="dark"] .services article span,
+html[data-theme="dark"] .services article p,
+html[data-theme="dark"] .contact .eyebrow,
+html[data-theme="dark"] .contact p {
+	color: #c1c1b9;
+}
+
+html[data-theme="dark"] .services .grid,
+html[data-theme="dark"] .services article,
+html[data-theme="dark"] .contact input,
+html[data-theme="dark"] .contact textarea {
+	border-color: #555550;
+}
+
+html[data-theme="dark"] .contact label {
+	color: #e0e0d9;
+}
+
+html[data-theme="dark"] .contact input,
+html[data-theme="dark"] .contact textarea {
+	color: #f3f1eb;
+}
+
+html[data-theme="dark"] .contact input::placeholder,
+html[data-theme="dark"] .contact textarea::placeholder {
+	color: #aaa9a2;
+}
+
+html[data-theme="dark"] .contact input:focus,
+html[data-theme="dark"] .contact textarea:focus {
+	border-bottom-color: #f3f1eb;
+}
+
+html[data-theme="dark"] .contact button {
+	background: #f3f1eb;
+	color: #171717;
+}
+
+html[data-theme="dark"] .contact button:hover {
+	background: #d7d7d0;
+}

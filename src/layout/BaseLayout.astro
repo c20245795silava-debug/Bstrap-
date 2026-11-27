@@ -10,6 +10,10 @@ import '../style/global.css';
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Bstrap — Everyday Bags</title>
+		<script is:inline>
+			const savedTheme = localStorage.getItem('bstrap-theme');
+			document.documentElement.dataset.theme = savedTheme === 'dark' ? 'dark' : 'light';
+		</script>
 	</head>
 	<body>
 		<slot />
