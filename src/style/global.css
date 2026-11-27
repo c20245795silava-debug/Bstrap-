@@ -9,6 +9,7 @@ body {
 	background: #fff;
 }
 
+
 html[data-theme="dark"] body {
 	color: #f3f1eb;
 	background: #171717;
